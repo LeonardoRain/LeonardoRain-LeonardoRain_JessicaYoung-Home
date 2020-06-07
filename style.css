@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', 'Poppins', sans-serif;
+    /* background-image: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad); */
+    background-image: linear-gradient(125deg, #00cec9, #55efc4, #81ecec, #74b9ff, #fd79a8);
+    background-size: 400%;
+    animation: bganimation 12s infinite;
+}
+
+.head {
+    height: 100px;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.head img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 210px;
+    height: 70px;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    margin: 20px 0 20px 75px;
+    font-size: 36px;
+    font-weight: 900;
+    user-select: none;
+}
+
+@keyframes bganimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content {
+    margin-top: 10px;
+
+}
+
+/*------------------------------- 日历样式 ------------------------------- */
+.calendar {
+    margin: 0 auto;
+    background-color: #fff;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid #fff;
+    /*边框*/
+    border-radius: 2px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.calendar .date {
+    position: relative;
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+    /*盒子大小规则*/
+}
+
+.calendar .date h3 {
+    margin: 0;
+    padding: 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: left;
+    color: #636e72;
+    user-select: none;
+    text-transform: capitalize;
+    /*首字母大写*/
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.calendar .date h4 {
+    margin: 0;
+    padding: 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #636e72;
+    text-align: left;
+    user-select: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.calendar .date .days {
+    display: flex;
+    flex-wrap: wrap;
+    /*可换行*/
+}
+
+.calendar .date .days .number.active {
+    background-color: #81ecec;
+    color: #fff;
+    cursor: pointer;
+    /*鼠标样式*/
+    border-radius: 5px;
+    /*边框圆角*/
+}
+
+.calendar .date .days .number:hover {
+    background-color: #81ecec;
+    color: #fff;
+    cursor: pointer;
+    /*鼠标样式*/
+    border-radius: 5px;
+    /*边框圆角*/
+}
+
+.calendar .date .days .day,
+.calendar .date .days .number {
+    width: 48px;
+    height: 48px;
+    color: #636e72;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.calendar .date .days .day {
+    font-weight: 700;
+}
+
+.calendar .date .days .day:first-child,
+.calendar .date .days .number:nth-child(7n+1) {
+    /*7个为一组，每组第一个*/
+    color: #ff7675;
+    font-weight: 900;
+}
+
+.calendar .img {
+    position: relative;
+    /*定位*/
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #000;
+    user-select: none;
+}
+
+.calendar .img img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*元素内容如何适应屏幕*/
+}
+
+.jt {
+    width: 20px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    left: 370px;
+}
+
+.jt>svg {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.jt>svg:hover {
+    opacity: .5;
+}
+
+/* ------------------------------- 3D时钟样式 ------------------------------- */
+.clockWrap {
+    width: 530px;
+    margin: 30px auto;
+}
+
+.clock {
+    width: auto;
+}
+
+.flip-clock-dot {
+    background: #ccc;
+}
+
+.flip-clock-meridium a {
+    color: #ccc;
+}
+
+/*  ------------------------------- 页脚 -------------------------------  */
+footer {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px 0;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.logo {
+    width: 265px;
+}
+
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    color: #001a12;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+}
+
+.social-media a:hover {
+    color: #A5D2E4;
+}
+
+.right-col h1 {
+    font-size: 26px;
+}
+
+.border {
+    width: 100px;
+    height: 4px;
+    background: #F7D5D4;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.txtb {
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+}
+
+.btn {
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #f1f1f1;
+    background: #A5D2E4;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+}
+
+.btn:hover {
+    opacity: .6;
+}
+
+.page-content {
+    min-height: 100vh;
+    font-style: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:960px) {
+    .footer-container {
+        max-width: 600px;
+    }
+
+    .right-col {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .left-col {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .btn {
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
