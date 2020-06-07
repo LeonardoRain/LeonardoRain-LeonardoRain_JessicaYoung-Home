@@ -12,7 +12,7 @@ body {
 .head {
     height: 100px;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .head img {
@@ -26,7 +26,7 @@ body {
 .title {
     color: rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
-    margin: 20px 0 20px 75px;
+    margin: 20px 0;
     font-size: 36px;
     font-weight: 900;
     user-select: none;
@@ -233,31 +233,23 @@ footer {
     flex-wrap: wrap-reverse;
 }
 
-.logo {
-    width: 265px;
+
+/* --------------------------- footerLogo ------------------------ */
+
+.footerLogo {
+    width: 300px;
+    margin: 0 15px;
+}
+
+.footerLogo:hover {
+    border-radius: 3%;
+    transition: 0.4s linear;
 }
 
 
 /* --------------------------- 社交媒体css ------------------------ */
 
-
-/* .social-media {
-    margin: 20px 0;
-}
-
-.social-media a {
-    color: #001a12;
-    margin-right: 25px;
-    font-size: 22px;
-    text-decoration: none;
-    transition: .3s linear;
-}
-
-.social-media a:hover {
-    color: #A5D2E4;
-} */
-
-.middle {
+.social-media {
     width: 100%;
     text-align: center;
 }
@@ -318,8 +310,17 @@ footer {
     }
 }
 
+.rights-text {
+    color: #9b9b9b;
+}
+
 .right-col h1 {
     font-size: 26px;
+    color: #BA8381;
+}
+
+.right-col p {
+    color: #BA8381;
 }
 
 .border {
