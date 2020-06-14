@@ -96,10 +96,15 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="flipclock.js"></script>
     <script type="text/javascript">
-        var clock = $('.clock').FlipClock({
-            clockFace: 'TwelveHourClock'
-                // clockFace: 'TwentyFourHourClock'
-        })
+        // 相爱计时
+        var loveDate = new Date('2020-02-01 00:00:00 am');
+        var now = new Date();
+        var diff = (now.getTime() / 1000) - (loveDate.getTime() / 1000);
+        console.log(diff);
+        var clock = $('.clock').FlipClock(diff, {
+            clockFace: 'DailyCounter',
+            countdown: false
+        });
     </script>
 </body>
 
