@@ -23,7 +23,7 @@
     </div>
     <div class="content">
         <!-- 日历 -->
-        <div class="calendar">
+        <!-- <div class="calendar">
             <div class="date">
                 <h3></h3>
                 <h4></h4>
@@ -46,7 +46,7 @@
             <div class="img">
                 <img src="bg.jpg" alt="Error">
             </div>
-        </div>
+        </div> -->
         <!-- 恋爱计时 -->
         <div class="clockWrap">
             <div class="LoveTime">
@@ -54,9 +54,17 @@
                     <div class="text" data-text="LoveTime">LoveTime</div>
                 </span>
             </div>
-            <div class="clock"></div>
+            <div class="loveTimeClock"></div>
         </div>
-        <!-- 考研计时 -->
+        <!-- UNGEE考研计时 全国硕士研究生统一招生考试（Unified National Graduate Entrance Examination）-->
+        <div class="clockWrap">
+            <div class="UNGEETime">
+                <span class="container">
+                    <div class="text" data-text="UNGEETime">UNGEETime</div>
+                </span>
+            </div>
+            <div class="UNGEETimeClock"></div>
+        </div>
     </div>
     <footer>
         <div class="footer-container">
@@ -102,14 +110,22 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="flipclock.js"></script>
     <script type="text/javascript">
-        // 恋爱计时
+        // 恋爱计时 loveTimeClock
         var loveDate = new Date('2020-02-01 00:00:00 am');
         var now = new Date();
         var diff = (now.getTime() / 1000) - (loveDate.getTime() / 1000);
-        console.log(diff);
-        var clock = $('.clock').FlipClock(diff, {
+        var clock = $('.loveTimeClock').FlipClock(diff, {
             clockFace: 'DailyCounter',
             countdown: false
+        });
+
+        // 考研计时 UNGEETime
+        var UNGEEDate = new Date('2020-12-21 08:30:00 am');
+        var now = new Date();
+        var diff = (UNGEEDate.getTime() / 1000) - (now.getTime() / 1000);
+        var clock = $('.UNGEETimeClock').FlipClock(diff, {
+            clockFace: 'DailyCounter',
+            countdown: true
         });
     </script>
 </body>

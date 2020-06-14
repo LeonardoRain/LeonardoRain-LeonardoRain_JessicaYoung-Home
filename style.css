@@ -203,6 +203,14 @@ body {
 
 /* ------------------------------- LoveTime ------------------------------- */
 
+.UNGEETime {
+    width: 750px !important;
+    text-align: center;
+}
+
+
+/* ------------------------------- LoveTime ------------------------------- */
+
 .LoveTime {
     width: 750px !important;
     text-align: center;
@@ -253,7 +261,7 @@ body {
 .clockWrap {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    margin: 24px 0;
 }
 
 .flip-clock-wrapper {
@@ -261,7 +269,7 @@ body {
     margin: 0;
 }
 
-.clock {
+.loveTimeClock {
     /* display: flex;
     justify-content: center;
     align-items: center; */
