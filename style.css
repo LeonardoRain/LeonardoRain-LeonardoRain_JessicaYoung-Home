@@ -201,20 +201,71 @@ body {
 }
 
 
-/* ------------------------------- 3D时钟样式 ------------------------------- */
+/* ------------------------------- LoveTime ------------------------------- */
+
+.LoveTime {
+    width: 750px !important;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 100px;
+    /* text-transform: uppercase; */
+    font-weight: 900;
+    position: relative;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    width: 0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.container::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    right: 0;
+    top: 0;
+    transition: 0.6s;
+}
+
+.container:hover .text::before,
+.container:hover::before {
+    width: 100%;
+}
+
+
+/* ------------------------------- LoveTime计时器 ------------------------------- */
 
 .clockWrap {
+    display: flex;
+    justify-content: center;
     margin: 40px 0;
 }
 
 .flip-clock-wrapper {
+    width: 750px !important;
     margin: 0;
 }
 
 .clock {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    display: inline-block;
 }
 
 .flip-clock-dot {
