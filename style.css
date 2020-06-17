@@ -128,11 +128,7 @@ body {
 
 .flip-clock-wrapper {
     width: 7rem !important;
-    margin: 0;
-}
-
-.loveTimeClock {
-    display: inline-block;
+    margin-top: 0.22rem !important;
 }
 
 .flip-clock-dot {
