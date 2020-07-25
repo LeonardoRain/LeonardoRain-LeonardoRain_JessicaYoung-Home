@@ -1,155 +1,160 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'montserrat', 'Poppins', sans-serif;
-    font-size: 100px;
-    background-image: linear-gradient(125deg, #00cec9, #55efc4, #81ecec, #74b9ff, #fd79a8);
-    background-size: 400%;
-    animation: bganimation 12s infinite;
-    overflow: -Scroll;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", "Poppins", sans-serif;
+  font-size: 100px;
+  background-image: linear-gradient(
+    125deg,
+    #00cec9,
+    #55efc4,
+    #81ecec,
+    #74b9ff,
+    #fd79a8
+  );
+  background-size: 400%;
+  animation: bganimation 12s infinite;
+  overflow: -Scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .head {
-    height: 0.8rem;
-    display: flex;
-    justify-content: center;
+  height: 0.8rem;
+  display: flex;
+  justify-content: center;
 }
 
 .head img {
-    position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 1.5rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 1.5rem;
 }
 
 .title {
-    color: rgba(255, 255, 255, 0.3);
-    text-transform: uppercase;
-    margin: 0.2rem 0;
-    font-size: 0.36rem;
-    font-weight: 900;
-    user-select: none;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  margin: 0.2rem 0;
+  font-size: 0.36rem;
+  font-weight: 900;
+  user-select: none;
 }
 
 @keyframes bganimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .content {
-    height: 90vh;
+  height: 90vh;
 }
-
 
 /* ------------------------------- UNGEETime ------------------------------- */
 
 .UNGEETime {
-    /* width: 7.5rem !important; */
-    text-align: center;
+  /* width: 7.5rem !important; */
+  text-align: center;
 }
 
 .loveDiv {
-    margin-top: 0.1rem;
+  margin-top: 0.1rem;
 }
 
 .ungeeDiv {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
-
 
 /* ------------------------------- LoveTime ------------------------------- */
 
 .LoveTime {
-    /* width: 7.5rem !important; */
-    text-align: center;
+  /* width: 7.5rem !important; */
+  text-align: center;
 }
 
 .container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .text {
-    font-size: 1rem;
-    /* text-transform: uppercase; */
-    font-weight: 900;
-    position: relative;
-    color: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  /* text-transform: uppercase; */
+  font-weight: 900;
+  position: relative;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .text::before {
-    content: attr(data-text);
-    position: absolute;
-    color: rgba(255, 255, 255, 0.4);
-    width: 0;
-    overflow: hidden;
-    transition: 0.6s;
+  content: attr(data-text);
+  position: absolute;
+  color: rgba(255, 255, 255, 0.4);
+  width: 0;
+  overflow: hidden;
+  transition: 0.6s;
 }
 
 .container::before {
-    text-align: center;
-    content: "";
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.3);
-    right: 0;
-    top: 0;
-    transition: 0.6s;
+  text-align: center;
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  right: 0;
+  top: 0;
+  transition: 0.6s;
 }
 
 .container:hover .text::before,
 .container:hover::before {
-    width: 100%;
+  width: 100%;
 }
-
 
 /* ------------------------------- LoveTime计时器 ------------------------------- */
 
 .clockWrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .flip-clock-wrapper {
-    width: 7rem !important;
-    margin-top: 0.22rem !important;
+  width: 7rem !important;
+  margin-top: 0.22rem !important;
 }
 
 .flip-clock-dot {
-    background: #ccc;
+  background: #ccc;
 }
 
 .flip-clock-meridium a {
-    color: #ccc;
+  color: #ccc;
 }
 
 .flip-clock-label {
-    font-family: 'montserrat';
-    font-size: 0.16rem;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.3) !important;
-    letter-spacing: 0.02rem;
-    position: relative;
-    left: 0.55rem;
+  font-family: "montserrat";
+  font-size: 0.16rem;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.3) !important;
+  letter-spacing: 0.02rem;
+  position: relative;
+  left: 0.55rem;
 }
 
 .days .flip-clock-label {
-    position: relative;
-    left: 0.82rem;
+  position: relative;
+  left: 0.82rem;
 }
