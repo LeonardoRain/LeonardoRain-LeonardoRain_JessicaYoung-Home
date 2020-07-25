@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>LeonardoRain's Home</title>
     <link rel="icon" type="image/x-icon" href="Rain_Logo.ico" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="flipclock.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="flipclock.css" />
+    <link rel="stylesheet" href="all.css" />
+  </head>
 
-<body>
+  <body>
     <div class="head">
-        <div class="logo">
-            <img src="logo.svg" alt="">
-        </div>
-        <div class="title">
-            home of Leonardo & Jessica
-        </div>
+      <div class="logo">
+        <img src="logo.svg" alt="" />
+      </div>
+      <div class="title">
+        home of Leonardo & Jessica
+      </div>
     </div>
     <div class="content">
-        <!-- 恋爱计时 -->
-        <div class="clockWrap loveDiv">
-            <div class="LoveTime">
-                <span class="container">
-                    <div class="text" data-text="LoveTime">LoveTime</div>
-                </span>
-            </div>
-            <div class="loveTimeClock"></div>
+      <!-- 恋爱计时 -->
+      <div class="clockWrap loveDiv">
+        <div class="LoveTime">
+          <span class="container">
+            <div class="text" data-text="LoveTime">LoveTime</div>
+          </span>
         </div>
-        <!-- UNGEE考研计时 全国硕士研究生统一招生考试（Unified National Graduate Entrance Examination）-->
-        <div class="clockWrap ungeeDiv">
-            <div class="UNGEETime">
-                <span class="container">
-                    <div class="text" data-text="UNGEETime">UNGEETime</div>
-                </span>
-            </div>
-            <div class="UNGEETimeClock"></div>
+        <div class="loveTimeClock"></div>
+      </div>
+      <!-- UNGEE考研计时 全国硕士研究生统一招生考试（Unified National Graduate Entrance Examination）-->
+      <div class="clockWrap ungeeDiv">
+        <div class="UNGEETime">
+          <span class="container">
+            <div class="text" data-text="UNGEETime">UNGEETime</div>
+          </span>
         </div>
+        <div class="UNGEETimeClock"></div>
+      </div>
     </div>
 
-    <script src="calender.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./jquery-3.4.1.js"></script>
     <script src="flipclock.js"></script>
     <script type="text/javascript">
-        // 恋爱计时 loveTimeClock
-        var loveDate = new Date('2020-02-01 00:00:00 am');
-        var now = new Date();
-        var diff = (now.getTime() / 1000) - (loveDate.getTime() / 1000);
-        var clock = $('.loveTimeClock').FlipClock(diff, {
-            clockFace: 'DailyCounter',
-            countdown: false
-        });
+      // 恋爱计时 loveTimeClock
+      var loveDate = new Date("2020-02-01 00:00:00 am");
+      var now = new Date();
+      var diff = now.getTime() / 1000 - loveDate.getTime() / 1000;
+      var clock = $(".loveTimeClock").FlipClock(diff, {
+        clockFace: "DailyCounter",
+        countdown: false,
+      });
 
-        // 考研计时 UNGEETime
-        var UNGEEDate = new Date('2020-12-21 08:30:00 am');
-        var now = new Date();
-        var diff = (UNGEEDate.getTime() / 1000) - (now.getTime() / 1000);
-        var clock = $('.UNGEETimeClock').FlipClock(diff, {
-            clockFace: 'DailyCounter',
-            countdown: true
-        });
+      // 考研计时 UNGEETime
+      var UNGEEDate = new Date("2020-12-21 08:30:00 am");
+      var now = new Date();
+      var diff = UNGEEDate.getTime() / 1000 - now.getTime() / 1000;
+      var clock = $(".UNGEETimeClock").FlipClock(diff, {
+        clockFace: "DailyCounter",
+        countdown: true,
+      });
     </script>
     <!-- 移动端适配 -->
     <script>
-        (function(doc, win) {
-            var docEl = doc.documentElement,
-                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                recalc = function() {
-                    var clientWidth = docEl.clientWidth;
-                    if (!clientWidth) return;
-                    if (clientWidth >= 750) {
-                        docEl.style.fontSize = '100px';
-                    } else {
-                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
-                    }
-                };
+      (function (doc, win) {
+        var docEl = doc.documentElement,
+          resizeEvt =
+            "orientationchange" in window ? "orientationchange" : "resize",
+          recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if (clientWidth >= 750) {
+              docEl.style.fontSize = "100px";
+            } else {
+              docEl.style.fontSize = 100 * (clientWidth / 750) + "px";
+            }
+          };
 
-            if (!doc.addEventListener) return;
-            win.addEventListener(resizeEvt, recalc, false);
-            doc.addEventListener('DOMContentLoaded', recalc, false);
-        })(document, window);
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+      })(document, window);
     </script>
-</body>
-
+  </body>
 </html>
