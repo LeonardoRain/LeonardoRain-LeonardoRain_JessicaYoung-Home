@@ -32,15 +32,6 @@
         </div>
         <div class="loveTimeClock"></div>
       </div>
-      <!-- UNGEE考研计时 全国硕士研究生统一招生考试（Unified National Graduate Entrance Examination）-->
-      <div class="clockWrap ungeeDiv">
-        <div class="UNGEETime">
-          <span class="container">
-            <div class="text" data-text="UNGEETime">UNGEETime</div>
-          </span>
-        </div>
-        <div class="UNGEETimeClock"></div>
-      </div>
     </div>
 
     <script src="./jquery-3.4.1.js"></script>
@@ -53,15 +44,6 @@
       var clock = $(".loveTimeClock").FlipClock(diff, {
         clockFace: "DailyCounter",
         countdown: false,
-      });
-
-      // 考研计时 UNGEETime
-      var UNGEEDate = new Date("2020-12-21 08:30:00 am");
-      var now = new Date();
-      var diff = UNGEEDate.getTime() / 1000 - now.getTime() / 1000;
-      var clock = $(".UNGEETimeClock").FlipClock(diff, {
-        clockFace: "DailyCounter",
-        countdown: true,
       });
     </script>
     <!-- 移动端适配 -->
